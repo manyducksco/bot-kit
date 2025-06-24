@@ -49,6 +49,7 @@ export const messageSentEventSchema = baseEventSchema.extend({
   data: z.object({
     room: roomSchema,
     message: messageSchema,
+    replyTo: messageSchema.optional(),
   }),
 });
 
@@ -61,6 +62,7 @@ export const botMentionedEventSchema = baseEventSchema.extend({
   data: z.object({
     room: roomSchema,
     message: messageSchema,
+    replyTo: messageSchema.optional(),
   }),
 });
 

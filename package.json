@@ -1,5 +1,5 @@
 {
-  "name": "@manyducks.co/chatbot",
+  "name": "@manyducks.co/bot-kit",
   "version": "0.0.1",
   "module": "dist/index.js",
   "devDependencies": {

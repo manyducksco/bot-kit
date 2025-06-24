@@ -1,10 +1,9 @@
-# @manyducks.co/chatbot
+# @manyducks.co/bot-kit
 
 Create bots for [🦆Chat](https://chat.manyducks.co). Bots are comprised of a webhook handler and an API for interacting with chat. This library abstracts away the gnarly details of handling webhooks and lets you focus on responding to events.
 
 ```js
-import { Hono } from "hono";
-import { Bot } from "@manyducks.co/chatbot";
+import { Bot } from "@manyducks.co/bot-kit";
 
 // Define your bot.
 const bot = new Bot({
