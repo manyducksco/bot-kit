@@ -1,5 +1,5 @@
 import { beforeEach, describe, test, expect, mock, Mock } from "bun:test";
-import { MessagesAPI } from "./messages";
+import { MessagesAPI } from "./messages.ts";
 
 beforeEach(() => {
   global.fetch = mock() as any as typeof fetch;

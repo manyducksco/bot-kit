@@ -1,6 +1,6 @@
-import { BotAPI } from "./api";
-import type { BotOptions } from "./types";
-import { BotWebhook } from "./webhook";
+import { BotAPI } from "./api/index.ts";
+import type { BotOptions } from "./types.ts";
+import { BotWebhook } from "./webhook.ts";
 
 export class Bot {
   readonly webhook;

@@ -1,7 +1,5 @@
-import type { BotOptions, WebhookContext } from "../types";
-import { MessagesAPI } from "./messages";
-
-export { MessagesAPI as BotMessages } from "./messages";
+import type { BotOptions, WebhookContext } from "../types.ts";
+import { MessagesAPI } from "./messages.ts";
 
 /**
  * API object passed to webhook handlers. All API calls made through this object

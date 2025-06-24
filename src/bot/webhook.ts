@@ -1,7 +1,7 @@
 import { fromZodError } from "zod-validation-error";
-import { Hasher } from "../hasher";
-import { eventListSchema, type EventList } from "../schema";
-import { BotAPI } from "./api";
+import { Hasher } from "../hasher.ts";
+import { eventListSchema, type EventList } from "../schema.ts";
+import { BotAPI } from "./api/index.ts";
 import type { BotOptions, WebhookContext, WebhookEvents } from "./types.ts";
 
 export type WebhookEventHandler<T> = (data: T, api: BotAPI) => any;

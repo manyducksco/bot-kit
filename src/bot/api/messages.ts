@@ -1,8 +1,8 @@
-import type { BotOptions, WebhookContext } from "../types";
+import type { BotOptions, WebhookContext } from "../types.ts";
 
 interface MessageCreateOptions {
   /**
-   * The room ID to send the message in.
+   * The room ID to send the message in. Event data generally includes room details.
    */
   roomId: string;
 

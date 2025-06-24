@@ -1,4 +1,9 @@
-export type HasherOptions = { secret: string };
+export type HasherOptions = {
+  /**
+   * A secret string to sign and verify against.
+   */
+  secret: string;
+};
 
 /**
  * Signs and/or verifies a payload using HMAC SHA-256.

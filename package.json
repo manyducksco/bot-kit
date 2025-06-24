@@ -25,7 +25,8 @@
     }
   },
   "scripts": {
-    "build": "vite build && tsc"
+    "build": "vite build && tsc",
+    "prepublishOnly": "NODE_ENV=production bun run build"
   },
   "type": "module",
   "types": "dist/index.d.ts",
