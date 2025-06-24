@@ -1,0 +1,36 @@
+{
+  "name": "@manyducks.co/chatbot",
+  "version": "0.0.1",
+  "module": "dist/index.js",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "hono": "^4.8.2",
+    "vite": "^6.3.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schema": {
+      "import": "./dist/schema.js",
+      "types": "./dist/schema.d.ts"
+    },
+    "./hono": {
+      "import": "./dist/hono.js",
+      "types": "./dist/hono.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "zod": "^3.25.67",
+    "zod-validation-error": "^3.5.2"
+  }
+}
