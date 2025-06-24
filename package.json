@@ -1,5 +1,6 @@
 {
   "name": "@manyducks.co/bot-kit",
+  "description": "Chatbot Toolkit for https://chat.manyducks.co",
   "version": "0.0.1",
   "module": "dist/index.js",
   "devDependencies": {
