@@ -2,18 +2,18 @@ import type { Event } from "../schema.ts";
 
 export interface BotOptions {
   /**
-   * A valid Bot API key. The bot will use this to make API calls to send messages.
+   * An API key for this bot. Defaults to `process.env['BOT_API_KEY']`.
    */
-  apiKey: string;
+  apiKey?: string;
 
   /**
-   * A string to identify this bot. Used for API calls.
+   * (Optional) A string to identify this bot for API calls. Defaults to `process.env['BOT_USER_AGENT']`.
    */
   userAgent?: string;
 
   /**
-   * A webhook secret. This is configured in the Bot settings in Chat.
-   * If present the bot will only handle incoming webhook requests signed with this secret.
+   * (Optional) If present the bot will only handle incoming webhook requests signed with this secret.
+   * Defaults to `process.env['BOT_WEBHOOK_SECRET']`.
    */
   webhookSecret?: string;
 }
