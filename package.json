@@ -23,6 +23,10 @@
     "./hono": {
       "import": "./dist/hono.js",
       "types": "./dist/hono.d.ts"
+    },
+    "./cloudflare": {
+      "import": "./dist/cloudflare.js",
+      "types": "./dist/cloudflare.d.ts"
     }
   },
   "scripts": {

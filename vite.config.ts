@@ -10,6 +10,7 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, "src/index.ts"),
         hono: resolve(__dirname, "src/hono.ts"),
+        cloudflare: resolve(__dirname, "src/cloudflare.ts"),
         schema: resolve(__dirname, "src/schema.ts"),
       },
       name: "@manyducks.co/chatbot",

@@ -36,8 +36,11 @@ export class BotWebhook {
 
   /**
    * Handles a webhook request.
+   *
+   * @param req - The incoming request to handle.
+   * @param cb - A function to call once all processing of events has completed. This will be some time after the Promise resolves with a response.
    */
-  async handle(req: Request): Promise<Response> {
+  async handle(req: Request, callback?: () => void): Promise<Response> {
     const method = req.method.toUpperCase();
 
     if (method === "GET") {
@@ -108,7 +111,7 @@ export class BotWebhook {
 
       // Everything looks good. Schedule handlers to run, then return a quick response.
       queueMicrotask(() => {
-        this.#dispatch(events, { requestId });
+        this.#dispatch(events, { requestId }).finally(callback);
       });
 
       return new Response("202 Accepted", {
