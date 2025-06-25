@@ -7,6 +7,10 @@ export class Bot {
   readonly api;
 
   constructor(options: BotOptions) {
+    if (!options.apiKey) {
+      throw new Error(`Expected 'apiKey' but received: ${options.apiKey}`);
+    }
+
     this.webhook = new BotWebhook(options);
     this.api = new BotAPI(options);
   }

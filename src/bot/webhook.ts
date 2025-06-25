@@ -124,6 +124,7 @@ export class BotWebhook {
 
   async #dispatch(events: EventList, context: WebhookContext) {
     const api = new BotAPI(this.#options, context);
+    const missingHandlers = new Set<string>();
 
     for (const event of events) {
       const handlers = this.#handlers.get(event.type);
@@ -135,6 +136,14 @@ export class BotWebhook {
             // TODO: Handle crash in listener.
             console.error("Error thrown in listener", error);
           }
+        }
+      } else {
+        // Warn once for each missing handler type.
+        if (!missingHandlers.has(event.type)) {
+          console.warn(
+            `[Bot.webhook] Received '${event.type}' event that has no handler. Add a handler or turn off this event in Bot settings.`,
+          );
+          missingHandlers.add(event.type);
         }
       }
     }
